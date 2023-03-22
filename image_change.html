@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/quinntonelli/image_box@latest/events.js"></script>
+    <!-- <script src="events.js"></script> -->
+  </head>
+  <body>
+    <a-scene physics="debug: false" vr-mode-ui="enabled: false">
+      <a-assets>
+        <img id="1" src="" crossorigin="anonymous">
+        <img id="2" src="" crossorigin="anonymous">
+        <img id="3" src="" crossorigin="anonymous">
+        <img id="4" src="" crossorigin="anonymous">
+        <img id="5" src="" crossorigin="anonymous">
+        <img id="6" src="" crossorigin="anonymous">
+        <img id="7" src="" crossorigin="anonymous">
+        <img id="8" src="" crossorigin="anonymous">
+        <img id="9" src="" crossorigin="anonymous">
+        <img id="10" src="" crossorigin="anonymous">
+        <img id="11" src="" crossorigin="anonymous">
+        <img id="12" src="" crossorigin="anonymous">
+        <img id="13" src="" crossorigin="anonymous">
+        <img id="14" src="" crossorigin="anonymous">
+        <img id="15" src="" crossorigin="anonymous">
+        <img id="16" src="" crossorigin="anonymous">
+        <img id="17" src="" crossorigin="anonymous">
+        <img id="18" src="" crossorigin="anonymous">
+        <img id="19" src="" crossorigin="anonymous">
+        <img id="20" src="" crossorigin="anonymous">
+        <img id="21" src="" crossorigin="anonymous">
+        <img id="22" src="" crossorigin="anonymous">
+        <img id="23" src="" crossorigin="anonymous">
+        <img id="24" src="" crossorigin="anonymous">
+        <img id="25" src="" crossorigin="anonymous">
+        <img id="26" src="" crossorigin="anonymous">
+        <img id="27" src="" crossorigin="anonymous">
+        <img id="28" src="" crossorigin="anonymous">
+        <img id="29" src="" crossorigin="anonymous">
+        <img id="30" src="" crossorigin="anonymous">
+        <img id="31" src="" crossorigin="anonymous">
+        <img id="32" src="" crossorigin="anonymous">
+        <img id="33" src="" crossorigin="anonymous">
+        <img id="34" src="" crossorigin="anonymous">
+        <img id="35" src="" crossorigin="anonymous">
+        <img id="36" src="" crossorigin="anonymous">
+        <img id="37" src="" crossorigin="anonymous">
+        <img id="38" src="" crossorigin="anonymous">
+        <img id="39" src="" crossorigin="anonymous">
+        <img id="40" src="" crossorigin="anonymous">
+        <img id="41" src="" crossorigin="anonymous">
+        <img id="42" src="" crossorigin="anonymous">
+        <img id="43" src="" crossorigin="anonymous">
+        <img id="44" src="" crossorigin="anonymous">
+        <img id="45" src="" crossorigin="anonymous">
+        <img id="46" src="" crossorigin="anonymous">
+        <img id="47" src="" crossorigin="anonymous">
+        <img id="48" src="" crossorigin="anonymous">
+        <img id="49" src="" crossorigin="anonymous">
+        <img id="50" src="" crossorigin="anonymous">
+        <img id="51" src="" crossorigin="anonymous">
+        <img id="52" src="" crossorigin="anonymous">
+        <img id="53" src="" crossorigin="anonymous">
+        <img id="54" src="" crossorigin="anonymous">
+        <img id="55" src="" crossorigin="anonymous">
+        <img id="56" src="" crossorigin="anonymous">
+        <img id="57" src="" crossorigin="anonymous">
+        <img id="58" src="" crossorigin="anonymous">
+        <img id="59" src="" crossorigin="anonymous">
+        <img id="60" src="" crossorigin="anonymous">
+      </a-assets>
+
+      <a-entity id="rig"
+          movement-controls="speed:1.0" kinematic-body
+          position="0 -30 59">
+      <a-entity camera
+            position="0 30 0"
+            look-controls="pointerLockEnabled: true">
+            <a-entity cursor="fuse: true; fuseTimeout: 500"
+            position="0 0 -5"
+            geometry="primitive: ring; radius-inner: 4; radius-outer: 4.05"
+            material="color: black">
+            </a-entity>
+          </a-entity>
+      </a-entity>
+
+      <a-light type="ambient" intensity="1.8" color="white"></a-light>
+
+      <!-- <a-sky src="#lion" rotation="0 270 0"></a-sky> -->
+      
+      <a-plane src="#7" timed-change-src cursor-change-src static-body position="0 0 0" rotation="0 0 0" width="60" height="60" material="side: double"></a-plane>
+      <a-plane src="#8" timed-change-src cursor-change-src static-body position="-30 0 30" rotation="0 90 0" width="60" height="60" material="side: double"></a-plane>
+      <a-plane src="#9" timed-change-src cursor-change-src static-body position="0 0 60" rotation="0 0 0" width="60" height="60" material="side: double"></a-plane>
+      <a-plane src="#10" timed-change-src cursor-change-src static-body position="30 0 30" rotation="0 90 0" width="60" height="60" material="side: double"></a-plane>
+      <a-plane src="#11" timed-change-src cursor-change-src static-body position="0 -30 30" rotation="90 0 0" width="60" height="60" material="side: double"></a-plane>
+      <a-plane src="#12" timed-change-src cursor-change-src static-body position="0 30 30" rotation="90 0 0" width="60" height="60" material="side: double"></a-plane>
+
+    </a-scene>
+
+    <script>
+
+      //there is a max defined by how many imgs are in assets... its 60
+      var imageCount = 60
+      initializeIDs(imageCount);
+      initializeImages(imageCount);
+
+    </script>
+
+  </body>
+</html>
