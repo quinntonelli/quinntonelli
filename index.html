@@ -77,6 +77,8 @@
           position="0 -30 59">
       <a-entity id="cam" camera
             vr-reset
+            custom-look-controls
+            look-controls-enabled="false"
             position="0 30 0"
             look-controls="pointerLockEnabled: true">
             <a-entity cursor="fuse: true; fuseTimeout: 500"
@@ -125,6 +127,21 @@
           }, 2000);
         }
       });
+      
+      AFRAME.registerComponent('custom-look-controls', {
+  dependencies: ['look-controls'],
+
+  init: function () {
+    // Disable automatic camera reset on VR headset detection
+    this.el.sceneEl.renderer.xr.enabled = false;
+
+    // Enable camera movement based on user's head movements
+    this.el.setAttribute('look-controls', {
+      enabled: true,
+      hmdEnabled: true
+    });
+  }
+});
       
       //setCamera();
       //there is a max defined by how many imgs are in assets... its 60
