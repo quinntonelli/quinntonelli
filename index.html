@@ -101,6 +101,16 @@
 
     <script>
 
+      
+      //required for vr compatibility
+      function setCamera(){
+          const camera = document.querySelector('#cam');
+          if(camera==null){
+              console.log("camera null");
+          } else {
+              camera.setAttribute('position', {x: 0, y: 30, z: 0});
+          }
+      }
       setCamera();
       //there is a max defined by how many imgs are in assets... its 60
       var imageCount = 60;
