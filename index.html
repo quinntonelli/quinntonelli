@@ -76,8 +76,7 @@
           movement-controls="speed:1.0" kinematic-body
           position="0 -30 59">
       <a-entity id="cam" camera
-            look-controls-enabled="false"
-            custom-look-controls
+            look-controls="pointerLockEnabled: true">
             position="0 30 0"
             <a-entity cursor="fuse: true; fuseTimeout: 500"
             position="0 0 -5"
@@ -126,22 +125,28 @@
 //         }
 //       });
       
-      AFRAME.registerComponent('custom-look-controls', {
-  dependencies: ['look-controls'],
+//       AFRAME.registerComponent('custom-look-controls', {
+//   dependencies: ['look-controls'],
 
-  init: function () {
-    // Disable automatic camera reset on VR headset detection
-    this.el.sceneEl.renderer.xr.enabled = false;
+//   init: function () {
+//     // Disable automatic camera reset on VR headset detection
+//     this.el.sceneEl.renderer.xr.enabled = false;
 
-    // Enable camera movement based on user's head movements
-    this.el.setAttribute('look-controls', {
-      enabled: true,
-      hmdEnabled: true
-      //pointerLockEnabled: true
-    });
-  }
-});
+//     // Enable camera movement based on user's head movements
+//     this.el.setAttribute('look-controls', {
+//       enabled: true,
+//       hmdEnabled: true
+//       //pointerLockEnabled: true
+//     });
+//   }
+// });
       
+      var sceneEl = document.querySelector('a-scene');
+
+      sceneEl.addEventListener('enter-vr', function () {
+        var cameraEl = sceneEl.querySelector('[camera]');
+        cameraEl.setAttribute('position', '0 30 0');
+      });
       //setCamera();
       //there is a max defined by how many imgs are in assets... its 60
       var imageCount = 60;
