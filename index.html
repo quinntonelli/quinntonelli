@@ -101,57 +101,6 @@
 
     <script>
       
-//       //required for vr compatibility
-//       function setCamera(){
-//           const camera = document.querySelector('#cam');
-//           if(camera==null){
-//               console.log("camera null");
-//           } else {
-//               camera.setAttribute('position', {x: 0, y: 0, z: 0});
-//               console.log("reset camera position");
-//           }
-//       }
-      
-//       AFRAME.registerComponent('vr-reset', {
-//         init: function () {
-//           this.el.sceneEl.addEventListener('enter-vr', this.onEnterVR.bind(this));
-//         },
-
-//         onEnterVR: function () {
-//           console.log("entered vr");
-//           setTimeout(function() {
-//             setCamera();
-//           }, 2000);
-//         }
-//       });
-      
-//       AFRAME.registerComponent('custom-look-controls', {
-//   dependencies: ['look-controls'],
-
-//   init: function () {
-//     // Disable automatic camera reset on VR headset detection
-//     this.el.sceneEl.renderer.xr.enabled = false;
-
-//     // Enable camera movement based on user's head movements
-//     this.el.setAttribute('look-controls', {
-//       enabled: true,
-//       hmdEnabled: true
-//       //pointerLockEnabled: true
-//     });
-//   }
-// });
-      
-      
-//       var sceneEl = document.querySelector('a-scene');
-
-//       sceneEl.addEventListener('enter-vr', function () {
-//         var cameraEl = sceneEl.querySelector('#cam');
-//         cameraEl.setAttribute('position', '0 30 0');
-//       });
-      
-      
-      //setCamera();
-      //there is a max defined by how many imgs are in assets... its 60
       var imageCount = 60;
       initializeIDs(imageCount);
       initializeImages(imageCount);
