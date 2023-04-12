@@ -101,6 +101,17 @@
 
     <script>
 
+      AFRAME.registerComponent('my-component', {
+        init: function () {
+          this.el.sceneEl.addEventListener('enter-vr', this.onEnterVR.bind(this));
+        },
+
+        onEnterVR: function () {
+          setCamera();
+        }
+      });
+
+  document.querySelector('#cam').setAttribute('my-component', '');
       
       //required for vr compatibility
       function setCamera(){
@@ -111,6 +122,7 @@
               camera.setAttribute('position', {x: 0, y: 30, z: 0});
           }
       }
+      
       setCamera();
       //there is a max defined by how many imgs are in assets... its 60
       var imageCount = 60;
