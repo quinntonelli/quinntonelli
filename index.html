@@ -144,7 +144,7 @@
       var sceneEl = document.querySelector('a-scene');
 
       sceneEl.addEventListener('enter-vr', function () {
-        var cameraEl = sceneEl.querySelector('[camera]');
+        var cameraEl = sceneEl.querySelector('#cam');
         cameraEl.setAttribute('position', '0 30 0');
       });
       //setCamera();
