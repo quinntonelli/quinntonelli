@@ -101,17 +101,6 @@
     </a-scene>
 
     <script>
-
-      AFRAME.registerComponent('vr-reset', {
-        init: function () {
-          this.el.sceneEl.addEventListener('enter-vr', this.onEnterVR.bind(this));
-        },
-
-        onEnterVR: function () {
-          console.log("entered vr");
-          setCamera();
-        }
-      });
       
       //required for vr compatibility
       function setCamera(){
@@ -122,6 +111,17 @@
               camera.setAttribute('position', {x: 0, y: 30, z: 0});
           }
       }
+      
+      AFRAME.registerComponent('vr-reset', {
+        init: function () {
+          this.el.sceneEl.addEventListener('enter-vr', this.onEnterVR.bind(this));
+        },
+
+        onEnterVR: function () {
+          console.log("entered vr");
+          setCamera();
+        }
+      });
       
       setCamera();
       //there is a max defined by how many imgs are in assets... its 60
