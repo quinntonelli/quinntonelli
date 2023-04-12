@@ -76,8 +76,8 @@
           movement-controls="speed:1.0" kinematic-body
           position="0 -30 59">
       <a-entity id="cam" camera
-            custom-look-controls
             look-controls-enabled="false"
+            custom-look-controls
             position="0 30 0"
             look-controls="pointerLockEnabled: true">
             <a-entity cursor="fuse: true; fuseTimeout: 500"
@@ -103,29 +103,29 @@
 
     <script>
       
-      //required for vr compatibility
-      function setCamera(){
-          const camera = document.querySelector('#cam');
-          if(camera==null){
-              console.log("camera null");
-          } else {
-              camera.setAttribute('position', {x: 0, y: 0, z: 0});
-              console.log("reset camera position");
-          }
-      }
+//       //required for vr compatibility
+//       function setCamera(){
+//           const camera = document.querySelector('#cam');
+//           if(camera==null){
+//               console.log("camera null");
+//           } else {
+//               camera.setAttribute('position', {x: 0, y: 0, z: 0});
+//               console.log("reset camera position");
+//           }
+//       }
       
-      AFRAME.registerComponent('vr-reset', {
-        init: function () {
-          this.el.sceneEl.addEventListener('enter-vr', this.onEnterVR.bind(this));
-        },
+//       AFRAME.registerComponent('vr-reset', {
+//         init: function () {
+//           this.el.sceneEl.addEventListener('enter-vr', this.onEnterVR.bind(this));
+//         },
 
-        onEnterVR: function () {
-          console.log("entered vr");
-          setTimeout(function() {
-            setCamera();
-          }, 2000);
-        }
-      });
+//         onEnterVR: function () {
+//           console.log("entered vr");
+//           setTimeout(function() {
+//             setCamera();
+//           }, 2000);
+//         }
+//       });
       
       AFRAME.registerComponent('custom-look-controls', {
   dependencies: ['look-controls'],
