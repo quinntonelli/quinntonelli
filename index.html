@@ -76,6 +76,7 @@
           movement-controls="speed:1.0" kinematic-body
           position="0 -30 59">
       <a-entity id="cam" camera
+            vr-reset
             position="0 30 0"
             look-controls="pointerLockEnabled: true">
             <a-entity cursor="fuse: true; fuseTimeout: 500"
@@ -101,17 +102,16 @@
 
     <script>
 
-      AFRAME.registerComponent('my-component', {
+      AFRAME.registerComponent('vr-reset', {
         init: function () {
           this.el.sceneEl.addEventListener('enter-vr', this.onEnterVR.bind(this));
         },
 
         onEnterVR: function () {
+          console.log("entered vr");
           setCamera();
         }
       });
-
-  document.querySelector('#cam').setAttribute('my-component', '');
       
       //required for vr compatibility
       function setCamera(){
