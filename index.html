@@ -73,14 +73,14 @@
       </a-assets>
 
       <a-entity id="rig"
-          movement-controls="speed:1.0" kinematic-body
-          position="0 -30 59">
+          movement-controls="speed:.1" kinematic-body
+          position="0 -3.0 5.9">
       <a-entity id="cam" camera
-            position="0 30 0"
+            position="0 3.0 0"
             look-controls="pointerLockEnabled: true">
             <a-entity cursor="fuse: true; fuseTimeout: 500"
-            position="0 0 -5"
-            geometry="primitive: ring; radius-inner: 4; radius-outer: 4"
+            position="0 0 -.5"
+            geometry="primitive: ring; radius-inner: .4; radius-outer: .4"
             material="color: black">
             </a-entity>
           </a-entity>
@@ -90,12 +90,12 @@
 
       <!-- <a-sky src="#lion" rotation="0 270 0"></a-sky> -->
       
-      <a-plane src="#1" timed-change-src cursor-change-src static-body position="0 0 0" rotation="0 0 0" width="60" height="60" material="side: double"></a-plane>
-      <a-plane src="#2" timed-change-src cursor-change-src static-body position="-30 0 30" rotation="0 90 0" width="60" height="60" material="side: double"></a-plane>
-      <a-plane src="#3" timed-change-src cursor-change-src static-body position="0 0 60" rotation="0 0 0" width="60" height="60" material="side: double"></a-plane>
-      <a-plane src="#4" timed-change-src cursor-change-src static-body position="30 0 30" rotation="0 90 0" width="60" height="60" material="side: double"></a-plane>
-      <a-plane src="#5" timed-change-src cursor-change-src static-body position="0 -30 30" rotation="90 0 0" width="60" height="60" material="side: double"></a-plane>
-      <a-plane src="#6" timed-change-src cursor-change-src static-body position="0 30 30" rotation="90 0 0" width="60" height="60" material="side: double"></a-plane>
+      <a-plane src="#1" timed-change-src cursor-change-src static-body position="0 0 0" rotation="0 0 0" width="6.0" height="6.0" material="side: double"></a-plane>
+      <a-plane src="#2" timed-change-src cursor-change-src static-body position="-3.0 0 3.0" rotation="0 90 0" width="6.0" height="6.0" material="side: double"></a-plane>
+      <a-plane src="#3" timed-change-src cursor-change-src static-body position="0 0 6.0" rotation="0 0 0" width="6.0" height="6.0" material="side: double"></a-plane>
+      <a-plane src="#4" timed-change-src cursor-change-src static-body position="3.0 0 3.0" rotation="0 90 0" width="6.0" height="6.0" material="side: double"></a-plane>
+      <a-plane src="#5" timed-change-src cursor-change-src static-body position="0 -3.0 3.0" rotation="90 0 0" width="6.0" height="6.0" material="side: double"></a-plane>
+      <a-plane src="#6" timed-change-src cursor-change-src static-body position="0 3.0 3.0" rotation="90 0 0" width="6.0" height="6.0" material="side: double"></a-plane>
 
     </a-scene>
 
@@ -141,12 +141,15 @@
 //   }
 // });
       
-      var sceneEl = document.querySelector('a-scene');
+      
+//       var sceneEl = document.querySelector('a-scene');
 
-      sceneEl.addEventListener('enter-vr', function () {
-        var cameraEl = sceneEl.querySelector('#cam');
-        cameraEl.setAttribute('position', '0 30 0');
-      });
+//       sceneEl.addEventListener('enter-vr', function () {
+//         var cameraEl = sceneEl.querySelector('#cam');
+//         cameraEl.setAttribute('position', '0 30 0');
+//       });
+      
+      
       //setCamera();
       //there is a max defined by how many imgs are in assets... its 60
       var imageCount = 60;
